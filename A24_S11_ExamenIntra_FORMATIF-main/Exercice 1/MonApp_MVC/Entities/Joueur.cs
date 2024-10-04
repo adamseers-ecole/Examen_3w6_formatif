@@ -14,9 +14,11 @@ namespace MonApp_MVC.Entities
         public string Nom { get; set; }
         [StringLength(10, MinimumLength = 5)]
         public string Position { get; set; }
+        [ValidateNever]
         public FicheOfficielle? FicheOfficielle { get; set; }
         [ForeignKey("Equipe")]
-        public int EquipeId { get; set; }
+        public int Equipe_Id { get; set; }
+        [ValidateNever]
         public Equipe Equipe { get; set; }
 
     }

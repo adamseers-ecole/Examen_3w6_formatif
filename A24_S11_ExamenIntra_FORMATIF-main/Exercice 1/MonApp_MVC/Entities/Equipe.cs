@@ -12,7 +12,9 @@ namespace MonApp_MVC.Entities
         public DateTime DateCreation { get; set; }
         [StringLength(25, MinimumLength = 5)]
         public string Proprietaire { get; set; }
+        [ValidateNever]
         public ICollection<Joueur>? Joueurs { get; set; }
+        [ValidateNever]
         public ICollection<Tournois>? Tournois { get; set; }
 
      }

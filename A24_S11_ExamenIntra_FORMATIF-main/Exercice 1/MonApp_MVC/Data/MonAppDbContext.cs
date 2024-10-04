@@ -10,6 +10,7 @@ namespace MonApp_MVC.Data
         public DbSet<Equipe> Equipes { get; set; }
         public DbSet<Joueur> Joueurs { get; set; }
         public DbSet<FicheOfficielle> FichesOfficielles { get; set; }
+        public DbSet<EquipeTournois> EquipesTournois { get; set; }
 
         public MonAppDbContext(DbContextOptions<MonAppDbContext> options)
             : base(options)

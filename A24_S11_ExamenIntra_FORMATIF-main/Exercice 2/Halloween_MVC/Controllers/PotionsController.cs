@@ -23,7 +23,7 @@ namespace Halloween.Controllers
         // GET: Potions
         public async Task<IActionResult> Index()
         {
-            var halloweenContext = _context.Potions.ToListAsync();
+            var halloweenContext = _context.Potions.Include(s => s.Creatrice).OrderBy(c => c.Nom).ToListAsync();
             return View(await halloweenContext);
         }
 

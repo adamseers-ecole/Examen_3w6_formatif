@@ -11,6 +11,7 @@ namespace MonApp_MVC.Entities
         [StringLength(15, MinimumLength = 5)]
         public string Titre { get; set; }
         public DateTime DateDebut { get; set; }
+        [ValidateNever]
         public ICollection<Equipe>? Equipes { get; set; }
 
   }
