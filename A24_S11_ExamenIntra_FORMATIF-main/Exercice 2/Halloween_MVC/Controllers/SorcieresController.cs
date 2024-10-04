@@ -22,10 +22,10 @@ namespace Halloween.Controllers
         }
 
         // GET: Sorcieres
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //Modifiez ici
-            List<Sorciere> ListeSorciere =  _context.Sorcieres.ToList();
+            List<Sorciere> ListeSorciere = _context.Sorcieres.OrderBy(s => s.Origine).ThenBy(s => s.Nom).ToList();
 
             return View(ListeSorciere);
         }
